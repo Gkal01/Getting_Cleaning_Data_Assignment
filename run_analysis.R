@@ -54,3 +54,4 @@ names(tidy_df) <- gsub("tBody", "Time_Body", names(tidy_df))
 #New Data set containing the average of each variable for each subject and each activity
 new_df <- tidy_df %>% group_by(subject, Activity) %>% summarise_all(mean)
 
+write.table(new_df, "FinalDF.txt", row.name=FALSE)
