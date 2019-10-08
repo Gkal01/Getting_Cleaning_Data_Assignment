@@ -36,5 +36,6 @@ names on each variable extracted from the second column of the activities data f
 
 5) It renames each column of the tidy data set tidy_df by providing descriptive variable names by expanding names such as Acc. to Accelerometer, etc.
 
-6) It creates the new_df data set containing the average of each variable for each activity and each subject. This is achieved by grouping 
-the tidy_df with respect to the activities and the subjects and then taking the average for each variable.
+6) It creates the new_df data set containing the average of each variable for each activity and each subject. This is achieved by grouping the tidy_df with respect to the activities and the subjects and then taking the average for each variable.
+
+7) Finally, it writes the new_df data set into a .txt file called "FinalDF.txt".
