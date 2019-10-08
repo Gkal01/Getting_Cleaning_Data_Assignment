@@ -12,4 +12,4 @@ Files included:
 	d) Appropriately labels the data set with descriptive variable names.
 	e) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 	
-The final data set is call new_df.
+FinalDF.txt is the exported final data after going through all the steps described above.
