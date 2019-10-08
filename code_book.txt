@@ -1,0 +1,40 @@
+The run_analysis.R scripts is used to perform the following actions:
+
+1) It downloads the dataset and unzips it under the folder called "UCI HAR Dataset"
+
+2) It assigns each set of data to variables:
+      features <- features.txt
+      The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ.
+      
+	  activities <- activity_labels.txt
+      List of activities performed when the corresponding measurements were taken and its codes 
+      
+	  subject_test <- test/subject_test.txt 
+      contains test data of test subjects (9/20 subjects) being observed
+      
+	  x_test <- test/X_test.txt 
+      contains recorded features test data
+      
+	  y_test <- test/y_test.txt 
+      contains test data of activities’code labels
+      
+	  subject_train <- test/subject_train.txt 
+      contains train data of 21/30 subjects being observed
+      
+	  x_train <- test/X_train.txt 
+      contains recorded features train data
+      
+	  y_train <- test/y_train.txt
+      contains train data of activities’code labels
+		
+3) It merges the training and the test datasets to create one new data set by using the rbind() and cbind() functions. With the rbind() functions
+it merges the x_test and x_train into the x_merged, the y_test and the y_train to the y_merged and the subject_test and subject_train to the subject_merged.
+Finally, the cbind() function is used to merge the columns of the subject_merged,x_merged and y_merged.
+
+4) It creates a tidy data set (tidy_df) by extracting only the measurements on the mean and the std from the Full_merged data frame and it applies appropriate
+names on each variable extracted from the second column of the activities data frame.
+
+5) It renames each column of the tidy data set tidy_df by providing descriptive variable names by expanding names such as Acc. to Accelerometer, etc.
+
+6) It creates the new_df data set containing the average of each variable for each activity and each subject. This is achieved by grouping 
+the tidy_df with respect to the activities and the subjects and then taking the average for each variable.
